@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-package class diagram">
+  <ClassDiagramComponents>
+    <Class name="PlanCelular" package="paquete01" visibility="public" isAbstract="true" xPosition="1166.0" yPosition="1054.0">
+      <Fields>
+        <Field name="nombrePropietario" type="String" visibility="protected"/>
+        <Field name="apellidoPropietario" type="String" visibility="protected"/>
+        <Field name="pasaportePropietario" type="String" visibility="protected"/>
+        <Field name="ciudadPropietario" type="String" visibility="protected"/>
+        <Field name="barrioPropietario" type="String" visibility="protected"/>
+        <Field name="marcaCelular" type="String" visibility="protected"/>
+        <Field name="modeloCelular" type="String" visibility="protected"/>
+        <Field name="numeroCelular" type="String" visibility="protected"/>
+        <Field name="pagoMensual" type="double" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="n"/>
+          <Argument type="String" name="a"/>
+          <Argument type="String" name="p"/>
+          <Argument type="String" name="ci"/>
+          <Argument type="String" name="b"/>
+          <Argument type="String" name="mC"/>
+          <Argument type="String" name="mdC"/>
+          <Argument type="String" name="nC"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="establecerNombrePropietario" returnType="void" visibility="public">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="establecerApellidoPropietario" returnType="void" visibility="public">
+          <Argument type="String" name="a"/>
+        </Method>
+        <Method name="establecerPasaportePropietario" returnType="void" visibility="public">
+          <Argument type="String" name="c"/>
+        </Method>
+        <Method name="establecerCiudadPropietario" returnType="void" visibility="public">
+          <Argument type="String" name="cd"/>
+        </Method>
+        <Method name="establecerBarrioPropietario" returnType="void" visibility="public">
+          <Argument type="String" name="b"/>
+        </Method>
+        <Method name="establecerMarcaCelular" returnType="void" visibility="public">
+          <Argument type="String" name="m"/>
+        </Method>
+        <Method name="establecerModeloCelular" returnType="void" visibility="public">
+          <Argument type="String" name="mc"/>
+        </Method>
+        <Method name="establecerNumeroCelular" returnType="void" visibility="public">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="establecerPagoMensual" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="obtenerNombrePropietario" returnType="String" visibility="public"/>
+        <Method name="obtenerApellidoPropietario" returnType="String" visibility="public"/>
+        <Method name="obtenerPasaportePropietario" returnType="String" visibility="public"/>
+        <Method name="obtenerCiudadPropietario" returnType="String" visibility="public"/>
+        <Method name="obtenerBarrioPropietario" returnType="String" visibility="public"/>
+        <Method name="obtenerMarcaCelular" returnType="String" visibility="public"/>
+        <Method name="obtenerModeloCelular" returnType="String" visibility="public"/>
+        <Method name="obtenerNumeroCelular" returnType="String" visibility="public"/>
+        <Method name="obtenerPagoMesual" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PlanPostPagoMegas" package="paquete01" visibility="public" xPosition="411.0" yPosition="579.0">
+      <Fields>
+        <Field name="gigasInternet" type="double" visibility="private"/>
+        <Field name="costoGigasInternet" type="double" visibility="private"/>
+        <Field name="tarifaBase" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="gI"/>
+          <Argument type="double" name="cGI"/>
+          <Argument type="double" name="tB"/>
+          <Argument type="String" name="nombrePropietario"/>
+          <Argument type="String" name="apellidoPropietario"/>
+          <Argument type="String" name="pasaportePropietario"/>
+          <Argument type="String" name="ciudadPropietario"/>
+          <Argument type="String" name="barrioPropietario"/>
+          <Argument type="String" name="marcaCelular"/>
+          <Argument type="String" name="modeloCelular"/>
+          <Argument type="String" name="numeroCelular"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="obtenerGigasInternet" returnType="double" visibility="public"/>
+        <Method name="establecerGigasInternet" returnType="void" visibility="public">
+          <Argument type="double" name="gnet"/>
+        </Method>
+        <Method name="obtenerCostoGigasInternet" returnType="double" visibility="public"/>
+        <Method name="establecerCostoGigasInternet" returnType="void" visibility="public">
+          <Argument type="double" name="c"/>
+        </Method>
+        <Method name="obtenerTarifaBase" returnType="double" visibility="public"/>
+        <Method name="establecerTarifaBase" returnType="void" visibility="public">
+          <Argument type="double" name="t"/>
+        </Method>
+        <Method name="establecerPagoMensual" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PlanPostPagoMinutos" package="paquete01" visibility="public" xPosition="1744.0" yPosition="126.0">
+      <Fields>
+        <Field name="minutosNacionales" type="double" visibility="private"/>
+        <Field name="costoMinutoNacional" type="double" visibility="private"/>
+        <Field name="minutosInternacionales" type="double" visibility="private"/>
+        <Field name="costoMinutoInternacional" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="minutosNacionales"/>
+          <Argument type="double" name="costoMinutoNacional"/>
+          <Argument type="double" name="minutosInternacionales"/>
+          <Argument type="double" name="costoMinutoInternacional"/>
+          <Argument type="String" name="nombrePropietario"/>
+          <Argument type="String" name="apellidoPropietario"/>
+          <Argument type="String" name="pasaportePropietario"/>
+          <Argument type="String" name="ciudadPropietario"/>
+          <Argument type="String" name="barrioPropietario"/>
+          <Argument type="String" name="marcaCelular"/>
+          <Argument type="String" name="modeloCelular"/>
+          <Argument type="String" name="numeroCelular"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="obtenerMinutosNacionales" returnType="double" visibility="public"/>
+        <Method name="establecerMinutosNacionales" returnType="void" visibility="public">
+          <Argument type="double" name="minutosNacionales"/>
+        </Method>
+        <Method name="obtenerCostoMinutoNacional" returnType="double" visibility="public"/>
+        <Method name="establecerCostoMinutoNacional" returnType="void" visibility="public">
+          <Argument type="double" name="costoMinutoNacional"/>
+        </Method>
+        <Method name="obtenerMinutosInternacionales" returnType="double" visibility="public"/>
+        <Method name="establecerMinutosInternacionales" returnType="void" visibility="public">
+          <Argument type="double" name="minutosInternacionales"/>
+        </Method>
+        <Method name="obtenerCostoMinutoInternacional" returnType="double" visibility="public"/>
+        <Method name="establecerCostoMinutoInternacional" returnType="void" visibility="public">
+          <Argument type="double" name="costoMinutoInternacional"/>
+        </Method>
+        <Method name="establecerPagoMensual" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PlanPostPagoMinutosMegas" package="paquete01" visibility="public" xPosition="2009.0" yPosition="1150.0">
+      <Fields>
+        <Field name="minutosSaldo" type="double" visibility="private"/>
+        <Field name="costoMinutosSaldo" type="double" visibility="private"/>
+        <Field name="gigasInternet" type="double" visibility="private"/>
+        <Field name="costoGiga" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="minutosSaldo"/>
+          <Argument type="double" name="costoMinutosSaldo"/>
+          <Argument type="double" name="gigasInternet"/>
+          <Argument type="double" name="costoGiga"/>
+          <Argument type="String" name="nombrePropietario"/>
+          <Argument type="String" name="apellidoPropietario"/>
+          <Argument type="String" name="pasaportePropietario"/>
+          <Argument type="String" name="ciudadPropietario"/>
+          <Argument type="String" name="barrioPropietario"/>
+          <Argument type="String" name="marcaCelular"/>
+          <Argument type="String" name="modeloCelular"/>
+          <Argument type="String" name="numeroCelular"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="obtenerMinutosSaldo" returnType="double" visibility="public"/>
+        <Method name="establecerMinutosSaldo" returnType="void" visibility="public">
+          <Argument type="double" name="minutosSaldo"/>
+        </Method>
+        <Method name="obtenerCostoMinutosSaldo" returnType="double" visibility="public"/>
+        <Method name="establecerCostoMinutosSaldo" returnType="void" visibility="public">
+          <Argument type="double" name="costoMinutosSaldo"/>
+        </Method>
+        <Method name="obtenerGigasInternet" returnType="double" visibility="public"/>
+        <Method name="establecerGigasInternet" returnType="void" visibility="public">
+          <Argument type="double" name="gigasInternet"/>
+        </Method>
+        <Method name="obtenerCostoGiga" returnType="double" visibility="public"/>
+        <Method name="establecerCostoGiga" returnType="void" visibility="public">
+          <Argument type="double" name="costoGiga"/>
+        </Method>
+        <Method name="establecerPagoMensual" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PlanPostPagoMinutosMegasEconomico" package="paquete01" visibility="public" xPosition="2039.0" yPosition="1704.0">
+      <Fields>
+        <Field name="minutosSaldo" type="double" visibility="private"/>
+        <Field name="costoMinutosSaldo" type="double" visibility="private"/>
+        <Field name="gigasInternet" type="double" visibility="private"/>
+        <Field name="costoGiga" type="double" visibility="private"/>
+        <Field name="porcentajeDescuento" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="minutosSaldo"/>
+          <Argument type="double" name="costoMinutosSaldo"/>
+          <Argument type="double" name="gigasInternet"/>
+          <Argument type="double" name="costoGiga"/>
+          <Argument type="double" name="porcentajeDescuento"/>
+          <Argument type="String" name="nombrePropietario"/>
+          <Argument type="String" name="apellidoPropietario"/>
+          <Argument type="String" name="pasaportePropietario"/>
+          <Argument type="String" name="ciudadPropietario"/>
+          <Argument type="String" name="barrioPropietario"/>
+          <Argument type="String" name="marcaCelular"/>
+          <Argument type="String" name="modeloCelular"/>
+          <Argument type="String" name="numeroCelular"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="obtenerMinutosSaldo" returnType="double" visibility="public"/>
+        <Method name="establecerMinutosSaldo" returnType="void" visibility="public">
+          <Argument type="double" name="minutosSaldo"/>
+        </Method>
+        <Method name="obtenerCostoMinutosSaldo" returnType="double" visibility="public"/>
+        <Method name="establecerCostoMinutosSaldo" returnType="void" visibility="public">
+          <Argument type="double" name="costoMinutosSaldo"/>
+        </Method>
+        <Method name="obtenerGigasInternet" returnType="double" visibility="public"/>
+        <Method name="establecerGigasInternet" returnType="void" visibility="public">
+          <Argument type="double" name="gigasInternet"/>
+        </Method>
+        <Method name="obtenerCostoGiga" returnType="double" visibility="public"/>
+        <Method name="establecerCostoGiga" returnType="void" visibility="public">
+          <Argument type="double" name="costoGiga"/>
+        </Method>
+        <Method name="obtenerPorcentajeDescuento" returnType="double" visibility="public"/>
+        <Method name="establecerPorcentajeDescuento" returnType="void" visibility="public">
+          <Argument type="double" name="porcentajeDescuento"/>
+        </Method>
+        <Method name="establecerPagoMensual" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Enlace" package="paquete02" visibility="public" xPosition="2979.0" yPosition="612.0">
+      <Fields>
+        <Field name="conn" type="Connection" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="establecerConexion" returnType="void" visibility="public"/>
+        <Method name="obtenerConexion" returnType="Connection" visibility="public"/>
+        <Method name="insertarPlanPostPagoMegas" returnType="void" visibility="public">
+          <Argument type="PlanPostPagoMegas" name="p1"/>
+        </Method>
+        <Method name="insertarPlanPostPagoMinutos" returnType="void" visibility="public">
+          <Argument type="PlanPostPagoMinutos" name="p1"/>
+        </Method>
+        <Method name="insertarPlanPostPagoMinutosMegasEconomico" returnType="void" visibility="public" isAbstract="true">
+          <Argument type="PlanPostPagoMinutosMegasEconomico" name="p1"/>
+        </Method>
+        <Method name="insertarPlanPostPagoMinutosMegas" returnType="void" visibility="public">
+          <Argument type="PlanPostPagoMinutosMegas" name="p1"/>
+        </Method>
+        <Method name="obtenerDataPlanPostPagoMegas" returnType="ArrayList&lt;PlanPostPagoMegas&gt;" visibility="public"/>
+        <Method name="obtenerDataPlanPostPagoMinutos" returnType="ArrayList&lt;PlanPostPagoMinutos&gt;" visibility="public"/>
+        <Method name="obtenerDataPlanPostPagoMinutosMegas" returnType="ArrayList&lt;PlanPostPagoMinutosMegas&gt;" visibility="public"/>
+        <Method name="obtenerDataPlanPostPagoMinutosMegasEconomico" returnType="ArrayList&lt;PlanPostPagoMinutosMegasEconomico&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Ejecutor" package="paquete03" visibility="public" xPosition="775.0" yPosition="1200.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="menu" returnType="int" visibility="public" isStatic="true"/>
+        <Method name="menu2" returnType="int" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="paquete01.PlanPostPagoMinutosMegas" target="paquete01.PlanCelular"/>
+    <UseRelation source="paquete02.Enlace" target="paquete01.PlanPostPagoMinutosMegasEconomico" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="paquete01.PlanPostPagoMinutos" target="paquete01.PlanCelular"/>
+    <IsRelation name="is" source="paquete01.PlanPostPagoMegas" target="paquete01.PlanCelular"/>
+    <UseRelation source="paquete02.Enlace" target="paquete01.PlanPostPagoMegas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="paquete01.PlanPostPagoMinutosMegasEconomico" target="paquete01.PlanCelular"/>
+    <UseRelation source="paquete02.Enlace" target="paquete01.PlanPostPagoMinutosMegas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="paquete02.Enlace" target="paquete01.PlanPostPagoMinutos" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

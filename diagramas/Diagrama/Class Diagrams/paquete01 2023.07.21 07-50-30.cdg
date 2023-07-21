@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="paquete01">
+  <ClassDiagramComponents>
+    <Class name="Cuenta" package="paquete01" visibility="public" xPosition="411.0" yPosition="850.0">
+      <Fields>
+        <Field name="nombreCliente" type="String" visibility="private"/>
+        <Field name="iva" type="double" visibility="private"/>
+        <Field name="menus" type="ArrayList&lt;Menu&gt;" visibility="private"/>
+        <Field name="subtotal" type="double" visibility="private"/>
+        <Field name="valorTotal" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="n"/>
+          <Argument type="ArrayList&lt;Menu&gt;" name="menu"/>
+          <Argument type="double" name="i"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="establecerNombreClinete" returnType="void" visibility="public">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="establecerListaMenu" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Menu&gt;" name="i"/>
+        </Method>
+        <Method name="calcularSubtotal" returnType="void" visibility="public"/>
+        <Method name="establecerIva" returnType="void" visibility="public">
+          <Argument type="double" name="i"/>
+        </Method>
+        <Method name="calcularValorTotal" returnType="void" visibility="public"/>
+        <Method name="obtenerNombreClinete" returnType="String" visibility="public"/>
+        <Method name="obtenerListaMenu" returnType="ArrayList&lt;Menu&gt;" visibility="public"/>
+        <Method name="obtenerSubTotal" returnType="double" visibility="public"/>
+        <Method name="obtenerIva" returnType="double" visibility="public"/>
+        <Method name="obtenerValorTotal" returnType="double" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Ejecutor01" package="paquete01" visibility="public" xPosition="924.0" yPosition="54.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Ejecutor02" package="paquete01" visibility="public" xPosition="1416.0" yPosition="54.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Menu" package="paquete01" visibility="public" isAbstract="true" xPosition="1070.0" yPosition="1034.0">
+      <Fields>
+        <Field name="nombrePlato" type="String" visibility="protected"/>
+        <Field name="valorMenu" type="double" visibility="protected"/>
+        <Field name="valorInicialMenu" type="double" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nomPlato"/>
+          <Argument type="double" name="vIMenu"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="establecerNombrePlato" returnType="void" visibility="public">
+          <Argument type="String" name="n"/>
+        </Method>
+        <Method name="establecerValorMenu" returnType="void" visibility="public">
+          <Argument type="double" name="vMenu"/>
+        </Method>
+        <Method name="establecerValorInicialMenu" returnType="void" visibility="public">
+          <Argument type="double" name="vIMenu"/>
+        </Method>
+        <Method name="obtenerNombrePlato" returnType="String" visibility="public"/>
+        <Method name="obtenerValorMenu" returnType="double" visibility="public"/>
+        <Method name="obtenerValorInicialMenu" returnType="double" visibility="public"/>
+        <Method name="calcularValorMenu" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="MenuCarta" package="paquete01" visibility="public" xPosition="561.0" yPosition="227.0">
+      <Fields>
+        <Field name="valorGuarnicion" type="double" visibility="private"/>
+        <Field name="valorBebida" type="double" visibility="private"/>
+        <Field name="porcentajeServicio" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombrePlato"/>
+          <Argument type="double" name="valorInicialMenu"/>
+          <Argument type="double" name="vGuarnicion"/>
+          <Argument type="double" name="vBebida"/>
+          <Argument type="double" name="pServicio"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="establecerValorGuarnicion" returnType="void" visibility="public">
+          <Argument type="double" name="vGuarnicion"/>
+        </Method>
+        <Method name="obtenerValorGuarnicion" returnType="double" visibility="public"/>
+        <Method name="establecerValorBebida" returnType="void" visibility="public">
+          <Argument type="double" name="vBebida"/>
+        </Method>
+        <Method name="obtenerValorBebida" returnType="double" visibility="public"/>
+        <Method name="establecerPorcentajeServicio" returnType="void" visibility="public">
+          <Argument type="double" name="pServicio"/>
+        </Method>
+        <Method name="obtenerPorcentajeServicio" returnType="double" visibility="public"/>
+        <Method name="calcularValorMenu" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MenuDia" package="paquete01" visibility="public" xPosition="1400.0" yPosition="284.0">
+      <Fields>
+        <Field name="valorPostre" type="double" visibility="private"/>
+        <Field name="valorBebida" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombrePlato"/>
+          <Argument type="double" name="valorInicialMenu"/>
+          <Argument type="double" name="vPostre"/>
+          <Argument type="double" name="vBebida"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="establecerValorPostre" returnType="void" visibility="public">
+          <Argument type="double" name="vPostre"/>
+        </Method>
+        <Method name="establecerValorBebida" returnType="void" visibility="public">
+          <Argument type="double" name="vBebida"/>
+        </Method>
+        <Method name="obtenerValorPostre" returnType="double" visibility="public"/>
+        <Method name="obtenerValorBebida" returnType="double" visibility="public"/>
+        <Method name="calcularValorMenu" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MenuEconomico" package="paquete01" visibility="public" xPosition="1620.0" yPosition="624.0">
+      <Fields>
+        <Field name="porcentajeDescuento" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombrePlato"/>
+          <Argument type="double" name="valorInicialMenu"/>
+          <Argument type="double" name="porDescu"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="establecerPorcentajeDescuento" returnType="void" visibility="public">
+          <Argument type="double" name="pDescuento"/>
+        </Method>
+        <Method name="obtenerPorcentajeDescuento" returnType="double" visibility="public"/>
+        <Method name="calcularValorMenu" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MenuNinos" package="paquete01" visibility="public" xPosition="1928.0" yPosition="1012.0">
+      <Fields>
+        <Field name="valorHelado" type="double" visibility="private"/>
+        <Field name="valorPastel" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombrePlato"/>
+          <Argument type="double" name="valorInicialMenu"/>
+          <Argument type="double" name="vHelado"/>
+          <Argument type="double" name="vPastel"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="establecerValorHelado" returnType="void" visibility="public">
+          <Argument type="double" name="vHelado"/>
+        </Method>
+        <Method name="establecerValorPastel" returnType="void" visibility="public">
+          <Argument type="double" name="vPastel"/>
+        </Method>
+        <Method name="obtenerValorHelado" returnType="double" visibility="public"/>
+        <Method name="obtenerValorPastel" returnType="double" visibility="public"/>
+        <Method name="calcularValorMenu" returnType="void" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="menus" source="paquete01.Cuenta" target="paquete01.Menu" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Menu&gt;"/>
+    <UseRelation source="paquete01.Cuenta" target="paquete01.Menu" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="paquete01.MenuDia" target="paquete01.Menu"/>
+    <IsRelation name="is" source="paquete01.MenuEconomico" target="paquete01.Menu"/>
+    <IsRelation name="is" source="paquete01.MenuCarta" target="paquete01.Menu"/>
+    <IsRelation name="is" source="paquete01.MenuNinos" target="paquete01.Menu"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
