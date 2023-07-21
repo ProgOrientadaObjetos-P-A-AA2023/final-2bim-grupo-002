@@ -4,6 +4,7 @@
  */
 package paquete03;
 
+import java.util.Locale;
 import java.util.Scanner;
 import paquete01.PlanPostPagoMegas;
 import paquete01.PlanPostPagoMinutos;
@@ -22,7 +23,9 @@ public class Ejecutor {
      */
     public static void main(String[] args) {
         Enlace c = new Enlace();
+        
         Scanner sc = new Scanner(System.in);
+        sc.useLocale(Locale.US);
         int op = 1, op2;
         String nombre, apellido, pasaporte, barrio, ciudad, marca, modelo, numeroCelular;
         do {

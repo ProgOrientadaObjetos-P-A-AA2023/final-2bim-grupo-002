@@ -48,7 +48,7 @@ public class Enlace {
             String data = String.format("INSERT INTO planPostPagoMegas (nombrePropietario,apellidoPropietario,pasaportePropietario,"
                     + "ciudadPropietario,barrioPropietario,marcaCelular,modeloCelular,numeroCelular,gigasInternet,"
                     + "costoGigasInternet,tarifaBase) values "
-                    + "('%s', '%s', '%s', '%s','%s', '%s', '%s', %s, %f, %f, %f)",
+                    + "('%s', '%s', '%s', '%s','%s', '%s', '%s', %s, %s, %s, %s)",
                     p1.obtenerNombrePropietario(), p1.obtenerApellidoPropietario(),
                     p1.obtenerPasaportePropietario(), p1.obtenerCiudadPropietario(),
                     p1.obtenerBarrioPropietario(), p1.obtenerMarcaCelular(),
@@ -72,7 +72,7 @@ public class Enlace {
             String data = String.format("INSERT INTO planPostPagoMinutos (nombrePropietario,apellidoPropietario,pasaportePropietario,"
                     + "ciudadPropietario,barrioPropietario,marcaCelular,modeloCelular,numeroCelular,minutosNacionales,costoMinutoNacional,"
                     + "minutosInternacionales,costoMinutoInternacional) values "
-                    + "('%s', '%s', '%s','%s', '%s', '%s', '%s', %s, %f, %f, %f, %f)",
+                    + "('%s', '%s', '%s','%s', '%s', '%s', '%s', %s, %s, %s, %s, %s)",
                     p1.obtenerNombrePropietario(), p1.obtenerApellidoPropietario(),
                     p1.obtenerPasaportePropietario(), p1.obtenerCiudadPropietario(),
                     p1.obtenerBarrioPropietario(), p1.obtenerMarcaCelular(),
@@ -97,7 +97,7 @@ public class Enlace {
             String data = String.format("INSERT INTO planPostPagoMinutosMegasEconomico (nombrePropietario,apellidoPropietario,pasaportePropietario,"
                     + "ciudadPropietario,barrioPropietario,marcaCelular,modeloCelular,numeroCelular,minutosSaldo,costoMinutosSaldo,"
                     + "gigasInternet,costoGiga,porcentajeDescuento) values "
-                    + "('%s', '%s','%s', '%s', '%s', '%s', '%s', %s, %f, %f, %f, %f, %f)",
+                    + "('%s', '%s','%s', '%s', '%s', '%s', '%s', %s, %s, %s, %s, %s, %s)",
                     p1.obtenerNombrePropietario(), p1.obtenerApellidoPropietario(),
                     p1.obtenerPasaportePropietario(), p1.obtenerCiudadPropietario(),
                     p1.obtenerBarrioPropietario(), p1.obtenerMarcaCelular(),
@@ -123,7 +123,7 @@ public class Enlace {
             String data = String.format("INSERT INTO planPostPagoMinutosMegas (nombrePropietario,apellidoPropietario,cedulaPropietario,"
                     + "ciudadPropietario,barrioPropietario,marcaCelular,modeloCelular,numeroCelular,minutosSaldo,costoMinutosSaldo,"
                     + "gigasInternet,costoGiga) values "
-                    + "('%s', '%s', '%s', '%s', '%s','%s', '%s', %s, %f, %f, %f, %f)",
+                    + "('%s', '%s', '%s', '%s', '%s','%s', '%s', %s, %s, %s, %s, %s)",
                     p1.obtenerNombrePropietario(), p1.obtenerApellidoPropietario(),
                     p1.obtenerPasaportePropietario(), p1.obtenerCiudadPropietario(),
                     p1.obtenerBarrioPropietario(), p1.obtenerMarcaCelular(),
