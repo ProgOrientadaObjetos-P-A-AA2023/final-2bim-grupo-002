@@ -48,7 +48,7 @@ public class Enlace {
             String data = String.format("INSERT INTO planPostPagoMegas (nombrePropietario,apellidoPropietario,pasaportePropietario,"
                     + "ciudadPropietario,barrioPropietario,marcaCelular,modeloCelular,numeroCelular,gigasInternet,"
                     + "costoGigasInternet,tarifaBase) values "
-                    + "('%s', '%s', '%s', '%s','%s', '%s', '%s', %s, %s, %s, %s)",
+                    + "('%s', '%s', '%s', '%s','%s', '%s', '%s', '%s', '%.2f', '%.2f', '%.2f')",
                     p1.obtenerNombrePropietario(), p1.obtenerApellidoPropietario(),
                     p1.obtenerPasaportePropietario(), p1.obtenerCiudadPropietario(),
                     p1.obtenerBarrioPropietario(), p1.obtenerMarcaCelular(),
@@ -72,7 +72,7 @@ public class Enlace {
             String data = String.format("INSERT INTO planPostPagoMinutos (nombrePropietario,apellidoPropietario,pasaportePropietario,"
                     + "ciudadPropietario,barrioPropietario,marcaCelular,modeloCelular,numeroCelular,minutosNacionales,costoMinutoNacional,"
                     + "minutosInternacionales,costoMinutoInternacional) values "
-                    + "('%s', '%s', '%s','%s', '%s', '%s', '%s', %s, %s, %s, %s, %s)",
+                    + "('%s', '%s', '%s', '%s','%s', '%s', '%s', '%s', '%.2f', '%.2f', '%.2f', '%.2f')",
                     p1.obtenerNombrePropietario(), p1.obtenerApellidoPropietario(),
                     p1.obtenerPasaportePropietario(), p1.obtenerCiudadPropietario(),
                     p1.obtenerBarrioPropietario(), p1.obtenerMarcaCelular(),
@@ -97,7 +97,7 @@ public class Enlace {
             String data = String.format("INSERT INTO planPostPagoMinutosMegasEconomico (nombrePropietario,apellidoPropietario,pasaportePropietario,"
                     + "ciudadPropietario,barrioPropietario,marcaCelular,modeloCelular,numeroCelular,minutosSaldo,costoMinutosSaldo,"
                     + "gigasInternet,costoGiga,porcentajeDescuento) values "
-                    + "('%s', '%s','%s', '%s', '%s', '%s', '%s', %s, %s, %s, %s, %s, %s)",
+                    + "('%s', '%s', '%s', '%s','%s', '%s', '%s', '%s', '%.2f', '%.2f', '%.2f', '%.2f', '%.2f')",
                     p1.obtenerNombrePropietario(), p1.obtenerApellidoPropietario(),
                     p1.obtenerPasaportePropietario(), p1.obtenerCiudadPropietario(),
                     p1.obtenerBarrioPropietario(), p1.obtenerMarcaCelular(),
@@ -123,7 +123,7 @@ public class Enlace {
             String data = String.format("INSERT INTO planPostPagoMinutosMegas (nombrePropietario,apellidoPropietario,cedulaPropietario,"
                     + "ciudadPropietario,barrioPropietario,marcaCelular,modeloCelular,numeroCelular,minutosSaldo,costoMinutosSaldo,"
                     + "gigasInternet,costoGiga) values "
-                    + "('%s', '%s', '%s', '%s', '%s','%s', '%s', %s, %s, %s, %s, %s)",
+                    + "('%s', '%s', '%s', '%s','%s', '%s', '%s', '%s', '%.2f', '%.2f', '%.2f', '%.2f')",
                     p1.obtenerNombrePropietario(), p1.obtenerApellidoPropietario(),
                     p1.obtenerPasaportePropietario(), p1.obtenerCiudadPropietario(),
                     p1.obtenerBarrioPropietario(), p1.obtenerMarcaCelular(),
@@ -148,17 +148,17 @@ public class Enlace {
 
             ResultSet rs = statement.executeQuery(data);
             while (rs.next()) {
-                PlanPostPagoMegas pm = new PlanPostPagoMegas(rs.getDouble("Gigas Internet"),
-                        rs.getDouble("Costo Gigas Internet"),
-                        rs.getDouble("Tarifa Base"),
-                        rs.getString("Nombre Propietario"),
-                        rs.getString("Apellido Propietario"),
-                        rs.getString("Pasaporte Propietario"),
-                        rs.getString("Ciudad Propietario"),
-                        rs.getString("Barrio Propietario"),
-                        rs.getString("Marca Celular"),
-                        rs.getString("Modelo Celular"),
-                        rs.getString("Numero Celular"));
+                PlanPostPagoMegas pm = new PlanPostPagoMegas(rs.getDouble("gigasInternet"),
+                        rs.getDouble("costoGigasInternet"),
+                        rs.getDouble("tarifaBase"),
+                        rs.getString("nombrePropietario"),
+                        rs.getString("apellidoPropietario"),
+                        rs.getString("pasaportePropietario"),
+                        rs.getString("ciudadPropietario"),
+                        rs.getString("barrioPropietario"),
+                        rs.getString("marcaCelular"),
+                        rs.getString("modeloCelular"),
+                        rs.getString("numeroCelular"));
 
                 pm.establecerPagoMensual();
                 lista.add(pm);
@@ -183,18 +183,18 @@ public class Enlace {
             ResultSet rs = statement.executeQuery(data);
             while (rs.next()) {
                 
-                PlanPostPagoMinutos pm1 = new PlanPostPagoMinutos(rs.getDouble("Minutos Nacionales"),
-                        rs.getDouble("Costo Minuto Nacional"),
-                        rs.getDouble("Minutos Internacionales"),
-                        rs.getDouble("Costo minuto Internacional"),
-                        rs.getString("Nombre Propietario"),
-                        rs.getString("Apellido Propietario"),
-                        rs.getString("Pasaporte Propietario"),
-                        rs.getString("Ciudad Propietario"),
-                        rs.getString("Barrio Propietario"),
-                        rs.getString("Marca Celular"),
-                        rs.getString("Modelo Celular"),
-                        rs.getString("Numero Celular"));
+                PlanPostPagoMinutos pm1 = new PlanPostPagoMinutos(rs.getDouble("minutosNacionales"),
+                        rs.getDouble("costoMinutoNacional"),
+                        rs.getDouble("minutosInternacionales"),
+                        rs.getDouble("costoMinutoInternacional"),
+                        rs.getString("nombrePropietario"),
+                        rs.getString("apellidoPropietario"),
+                        rs.getString("pasaportePropietario"),
+                        rs.getString("ciudadPropietario"),
+                        rs.getString("barrioPropietario"),
+                        rs.getString("marcaCelular"),
+                        rs.getString("modeloCelular"),
+                        rs.getString("numeroCelular"));
 
                 pm1.establecerPagoMensual();
                 lista.add(pm1);
@@ -202,7 +202,7 @@ public class Enlace {
 
             obtenerConexion().close();
         } catch (SQLException e) {
-            System.out.println("Exception: insertarPlanPostPagoMegas");
+            System.out.println("Exception: insertarPlanPostPagoMinutos");
             System.out.println(e.getMessage());
 
         }
@@ -218,18 +218,18 @@ public class Enlace {
 
             ResultSet rs = statement.executeQuery(data);
             while (rs.next()) {
-                PlanPostPagoMinutosMegas pm2 = new PlanPostPagoMinutosMegas(rs.getDouble("Minutos Saldo"), 
-                        rs.getDouble("Costo Minutos Saldo"), 
-                        rs.getDouble("Gigas Internet"), 
-                        rs.getDouble("Costo Gigas"), 
-                        rs.getString("Nombre Propietario"),
-                        rs.getString("Apellido Propietario"),
-                        rs.getString("Pasaporte Propietario"),
-                        rs.getString("Ciudad Propietario"),
-                        rs.getString("Barrio Propietario"),
-                        rs.getString("Marca Celular"),
-                        rs.getString("Modelo Celular"),
-                        rs.getString("Numero Celular"));
+                PlanPostPagoMinutosMegas pm2 = new PlanPostPagoMinutosMegas(rs.getDouble("minutosSaldo"), 
+                        rs.getDouble("costoMinutosSaldo"), 
+                        rs.getDouble("gigasInternet"), 
+                        rs.getDouble("costoGiga"), 
+                        rs.getString("nombrePropietario"),
+                        rs.getString("apellidoPropietario"),
+                        rs.getString("pasaportePropietario"),
+                        rs.getString("ciudadPropietario"),
+                        rs.getString("barrioPropietario"),
+                        rs.getString("marcaCelular"),
+                        rs.getString("modeloCelular"),
+                        rs.getString("numeroCelular"));
 
                 pm2.establecerPagoMensual();
                 lista.add(pm2);
@@ -253,19 +253,19 @@ public class Enlace {
 
             ResultSet rs = statement.executeQuery(data);
             while (rs.next()) {
-                PlanPostPagoMinutosMegasEconomico pm3 = new PlanPostPagoMinutosMegasEconomico(rs.getDouble("Minutos Saldo"), 
-                        rs.getDouble("Costo Minutos Saldo"), 
-                        rs.getDouble("Gigas Internet"), 
-                        rs.getDouble("Costo Gigas"),     
-                        rs.getDouble("Porcentaje Descuento"), 
-                        rs.getString("Nombre Propietario"),
-                        rs.getString("Apellido Propietario"),
-                        rs.getString("Pasaporte Propietario"),
-                        rs.getString("Ciudad Propietario"),
-                        rs.getString("Barrio Propietario"),
-                        rs.getString("Marca Celular"),
-                        rs.getString("Modelo Celular"),
-                        rs.getString("Numero Celular"));
+                PlanPostPagoMinutosMegasEconomico pm3 = new PlanPostPagoMinutosMegasEconomico(rs.getDouble("minutosSaldo"), 
+                        rs.getDouble("costoMinutosSaldo"), 
+                        rs.getDouble("gigasInternet"), 
+                        rs.getDouble("costoGiga"),     
+                        rs.getDouble("porcentajeDescuento"), 
+                        rs.getString("nombrePropietario"),
+                        rs.getString("apellidoPropietario"),
+                        rs.getString("pasaportePropietario"),
+                        rs.getString("ciudadPropietario"),
+                        rs.getString("barrioPropietario"),
+                        rs.getString("marcaCelular"),
+                        rs.getString("modeloCelular"),
+                        rs.getString("numeroCelular"));
 
                 pm3.establecerPagoMensual();
                 lista.add(pm3);
@@ -273,7 +273,7 @@ public class Enlace {
 
             obtenerConexion().close();
         } catch (SQLException e) {
-            System.out.println("Exception: insertarPlanPostPagoMinutosMegas");
+            System.out.println("Exception: insertarPlanPostPagoMinutosMegasEconomico");
             System.out.println(e.getMessage());
 
         }

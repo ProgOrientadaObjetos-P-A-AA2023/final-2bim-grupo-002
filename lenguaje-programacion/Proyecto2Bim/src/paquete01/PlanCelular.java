@@ -106,7 +106,7 @@ public abstract class PlanCelular {
                 + "Barrio del propietario: %s\n"
                 + "Marca celular: %s\n"
                 + "Modelo celular: %s\n"
-                + "Número de celular: %d\n",
+                + "Número de celular: %s\n",
                 nombrePropietario, apellidoPropietario,
                 pasaportePropietario, ciudadPropietario,
                 barrioPropietario, marcaCelular, modeloCelular,

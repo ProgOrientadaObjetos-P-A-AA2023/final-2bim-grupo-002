@@ -34,32 +34,32 @@ public class PlanPostPagoMinutos extends PlanCelular {
         return minutosNacionales;
     }
 
-    public void establecerMinutosNacionales(double minutosNacionales) {
-        this.minutosNacionales = minutosNacionales;
+    public void establecerMinutosNacionales(double minutosNacionale) {
+        minutosNacionales = minutosNacionale;
     }
 
     public double obtenerCostoMinutoNacional() {
         return costoMinutoNacional;
     }
 
-    public void establecerCostoMinutoNacional(double costoMinutoNacional) {
-        this.costoMinutoNacional = costoMinutoNacional;
+    public void establecerCostoMinutoNacional(double costoMinutoNaciona) {
+        costoMinutoNacional = costoMinutoNaciona;
     }
 
     public double obtenerMinutosInternacionales() {
         return minutosInternacionales;
     }
 
-    public void establecerMinutosInternacionales(double minutosInternacionales) {
-        this.minutosInternacionales = minutosInternacionales;
+    public void establecerMinutosInternacionales(double minutosInternacionale) {
+        minutosInternacionales = minutosInternacionale;
     }
 
     public double obtenerCostoMinutoInternacional() {
         return costoMinutoInternacional;
     }
 
-    public void establecerCostoMinutoInternacional(double costoMinutoInternacional) {
-        this.costoMinutoInternacional = costoMinutoInternacional;
+    public void establecerCostoMinutoInternacional(double costoMinutoInternaciona) {
+        costoMinutoInternacional = costoMinutoInternaciona;
     }
 
     @Override
@@ -76,8 +76,13 @@ public class PlanPostPagoMinutos extends PlanCelular {
                 + "Minutos internacionales: %.2f\n"
                 + "Costo minutos internacionales: %.2f\n"
                 + "Pago Mensual: %.2f\n",
-                super.toString(), minutosNacionales, costoMinutoNacional,
-                minutosInternacionales, costoMinutoInternacional, pagoMensual);
+                super.toString(),
+                minutosNacionales,
+                costoMinutoNacional,
+                minutosInternacionales,
+                costoMinutoInternacional,
+                pagoMensual);
+
         return reporte;
     }
 

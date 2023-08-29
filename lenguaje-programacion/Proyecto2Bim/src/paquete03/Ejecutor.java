@@ -140,7 +140,7 @@ public class Ejecutor {
                 switch (op3) {
                     case 1:
                         for (int i = 0; i < c.obtenerDataPlanPostPagoMinutos().size(); i++) {
-                            System.out.printf("%s\n", c.obtenerDataPlanPostPagoMegas().get(i));
+                            System.out.printf("%s\n", c.obtenerDataPlanPostPagoMinutos().get(i));
                         }
                         break;
                     case 2:
@@ -160,7 +160,7 @@ public class Ejecutor {
                         break;
                     case 5:
                         for (int i = 0; i < c.obtenerDataPlanPostPagoMinutos().size(); i++) {
-                            System.out.printf("%s\n", c.obtenerDataPlanPostPagoMegas().get(i));
+                            System.out.printf("%s\n", c.obtenerDataPlanPostPagoMinutos().get(i));
                         }
                         for (int i = 0; i < c.obtenerDataPlanPostPagoMegas().size(); i++) {
                             System.out.printf("%s\n", c.obtenerDataPlanPostPagoMegas().get(i));
